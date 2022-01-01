@@ -21,7 +21,6 @@ class HomeView: UIViewController {
     @IBOutlet weak var selectCountries: UIButton!
     
     
-    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
