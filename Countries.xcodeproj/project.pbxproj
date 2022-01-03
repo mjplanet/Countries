@@ -116,6 +116,23 @@
 			path = EmptyState;
 			sourceTree = "<group>";
 		};
+		6129A38A2783283C002CD060 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61A6A3912780E00C006A2B49 /* Country.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6129A38B27832842002CD060 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				61A6A37127805F8F006A2B49 /* Home */,
+				61A6A38827807875006A2B49 /* Countries List */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		61A6A34D27805C2B006A2B49 = {
 			isa = PBXGroup;
 			children = (
@@ -136,9 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				61A6A3932780E012006A2B49 /* Application */,
-				61A6A3912780E00C006A2B49 /* Country.swift */,
-				61A6A37127805F8F006A2B49 /* Home */,
-				61A6A38827807875006A2B49 /* Countries List */,
+				6129A38B27832842002CD060 /* Modules */,
+				6129A38A2783283C002CD060 /* Model */,
 				61A6A37627806E9E006A2B49 /* Tools */,
 				61A6A36227805C2C006A2B49 /* Assets.xcassets */,
 				61A6A36427805C2C006A2B49 /* LaunchScreen.storyboard */,
