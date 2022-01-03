@@ -10,11 +10,12 @@ import UIKit
 
 struct CountriesListModule {
     
-    func build() -> UIViewController {
+    func build(onDismiss: (() -> Void)?) -> UIViewController {
         let view = UIStoryboard.instantiate(.countriesList) as! CountriesListView
         let presenter = CountriesListPresenter()
         view.presenter = presenter
         presenter.view = view
+        presenter.onDismiss = onDismiss
         return view
     }
 }

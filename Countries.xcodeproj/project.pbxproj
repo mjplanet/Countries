@@ -20,6 +20,9 @@
 		61A6A38627807872006A2B49 /* CountriesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6A38327807872006A2B49 /* CountriesListPresenter.swift */; };
 		61A6A38727807872006A2B49 /* CountriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6A38427807872006A2B49 /* CountriesListView.swift */; };
 		61A6A38A2780787E006A2B49 /* CountriesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A6A3892780787E006A2B49 /* CountriesList.storyboard */; };
+		61A6A3922780E00C006A2B49 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6A3912780E00C006A2B49 /* Country.swift */; };
+		61A6A3962780EF22006A2B49 /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6A3952780EF22006A2B49 /* NavigationProtocol.swift */; };
+		61A6A39B2781D987006A2B49 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6A39A2781D987006A2B49 /* CountryManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		61A6A38327807872006A2B49 /* CountriesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListPresenter.swift; sourceTree = "<group>"; };
 		61A6A38427807872006A2B49 /* CountriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListView.swift; sourceTree = "<group>"; };
 		61A6A3892780787E006A2B49 /* CountriesList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CountriesList.storyboard; sourceTree = "<group>"; };
+		61A6A3912780E00C006A2B49 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		61A6A3952780EF22006A2B49 /* NavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
+		61A6A39A2781D987006A2B49 /* CountryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +76,8 @@
 		61A6A35827805C2B006A2B49 /* Countries */ = {
 			isa = PBXGroup;
 			children = (
-				61A6A35927805C2B006A2B49 /* AppDelegate.swift */,
-				61A6A35B27805C2B006A2B49 /* SceneDelegate.swift */,
+				61A6A3932780E012006A2B49 /* Application */,
+				61A6A3912780E00C006A2B49 /* Country.swift */,
 				61A6A37127805F8F006A2B49 /* Home */,
 				61A6A38827807875006A2B49 /* Countries List */,
 				61A6A37627806E9E006A2B49 /* Tools */,
@@ -96,6 +102,7 @@
 		61A6A37627806E9E006A2B49 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				61A6A3972781D8AD006A2B49 /* Managers */,
 				61A6A37727806EB3006A2B49 /* Builders */,
 			);
 			path = Tools;
@@ -118,6 +125,32 @@
 				61A6A38427807872006A2B49 /* CountriesListView.swift */,
 			);
 			path = "Countries List";
+			sourceTree = "<group>";
+		};
+		61A6A3932780E012006A2B49 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				61A6A3942780EF04006A2B49 /* Protocols */,
+				61A6A35927805C2B006A2B49 /* AppDelegate.swift */,
+				61A6A35B27805C2B006A2B49 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		61A6A3942780EF04006A2B49 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				61A6A3952780EF22006A2B49 /* NavigationProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		61A6A3972781D8AD006A2B49 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				61A6A39A2781D987006A2B49 /* CountryManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,10 +229,13 @@
 				61A6A35A27805C2B006A2B49 /* AppDelegate.swift in Sources */,
 				61A6A37927806EBB006A2B49 /* Storyboards.swift in Sources */,
 				61A6A37F278076E5006A2B49 /* HomeModule.swift in Sources */,
+				61A6A3962780EF22006A2B49 /* NavigationProtocol.swift in Sources */,
 				61A6A381278076E5006A2B49 /* HomeView.swift in Sources */,
 				61A6A380278076E5006A2B49 /* HomePresenter.swift in Sources */,
 				61A6A35C27805C2B006A2B49 /* SceneDelegate.swift in Sources */,
+				61A6A39B2781D987006A2B49 /* CountryManager.swift in Sources */,
 				61A6A38727807872006A2B49 /* CountriesListView.swift in Sources */,
+				61A6A3922780E00C006A2B49 /* Country.swift in Sources */,
 				61A6A38627807872006A2B49 /* CountriesListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +382,6 @@
 				INFOPLIST_FILE = Countries/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -376,7 +411,6 @@
 				INFOPLIST_FILE = Countries/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
