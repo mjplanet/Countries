@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol CountriesListViewInterface: NavigationProtocol {
+protocol CountriesListViewInterface: NavigationProtocol, LoadEmptyState {
     func initialSetup()
     func applySnapShot(countries: [Country])
     func addCheckMark(at indexPath: IndexPath)
@@ -124,6 +124,18 @@ extension CountriesListView: CountriesListViewInterface {
         cell.accessories = []
     }
     
+}
+
+// MARK: - Empty state
+
+extension CountriesListView {
+    func startLoading() {
+        collectionView.loadState.startAnimating()
+    }
+    
+    func stopLoading() {
+        collectionView.loadState.stopAnimating()
+    }
 }
 
 // MARK: - SearchBar Delegate

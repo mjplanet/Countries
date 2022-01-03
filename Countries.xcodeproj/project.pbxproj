@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6129A37327830C42002CD060 /* LoadEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129A37227830C42002CD060 /* LoadEmptyState.swift */; };
+		6129A37F27830C71002CD060 /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129A37627830C71002CD060 /* LoadState.swift */; };
+		6129A38027830C71002CD060 /* UIView + StatefulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129A37827830C71002CD060 /* UIView + StatefulView.swift */; };
+		6129A38127830C71002CD060 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129A37A27830C71002CD060 /* EmptyState.swift */; };
+		6129A38227830C71002CD060 /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6129A37B27830C71002CD060 /* EmptyStateView.xib */; };
+		6129A38327830C71002CD060 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129A37C27830C71002CD060 /* EmptyStateView.swift */; };
+		6129A38427830C71002CD060 /* EmptyStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129A37D27830C71002CD060 /* EmptyStateType.swift */; };
+		6129A38527830C71002CD060 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129A37E27830C71002CD060 /* Appearance.swift */; };
+		6129A38727830CBF002CD060 /* EmptyStateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129A38627830CBF002CD060 /* EmptyStateData.swift */; };
+		6129A389278312A1002CD060 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6129A388278312A1002CD060 /* Network.swift */; };
 		61A6A35A27805C2B006A2B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6A35927805C2B006A2B49 /* AppDelegate.swift */; };
 		61A6A35C27805C2B006A2B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6A35B27805C2B006A2B49 /* SceneDelegate.swift */; };
 		61A6A36327805C2C006A2B49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61A6A36227805C2C006A2B49 /* Assets.xcassets */; };
@@ -26,6 +36,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6129A37227830C42002CD060 /* LoadEmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadEmptyState.swift; sourceTree = "<group>"; };
+		6129A37627830C71002CD060 /* LoadState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadState.swift; sourceTree = "<group>"; };
+		6129A37827830C71002CD060 /* UIView + StatefulView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + StatefulView.swift"; sourceTree = "<group>"; };
+		6129A37A27830C71002CD060 /* EmptyState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
+		6129A37B27830C71002CD060 /* EmptyStateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
+		6129A37C27830C71002CD060 /* EmptyStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		6129A37D27830C71002CD060 /* EmptyStateType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateType.swift; sourceTree = "<group>"; };
+		6129A37E27830C71002CD060 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		6129A38627830CBF002CD060 /* EmptyStateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateData.swift; sourceTree = "<group>"; };
+		6129A388278312A1002CD060 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		61A6A35627805C2B006A2B49 /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A6A35927805C2B006A2B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61A6A35B27805C2B006A2B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +77,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6129A37427830C71002CD060 /* StatefulView */ = {
+			isa = PBXGroup;
+			children = (
+				6129A37527830C71002CD060 /* LoadState */,
+				6129A37727830C71002CD060 /* Extensions */,
+				6129A37927830C71002CD060 /* EmptyState */,
+				6129A37E27830C71002CD060 /* Appearance.swift */,
+				6129A38627830CBF002CD060 /* EmptyStateData.swift */,
+			);
+			path = StatefulView;
+			sourceTree = "<group>";
+		};
+		6129A37527830C71002CD060 /* LoadState */ = {
+			isa = PBXGroup;
+			children = (
+				6129A37627830C71002CD060 /* LoadState.swift */,
+			);
+			path = LoadState;
+			sourceTree = "<group>";
+		};
+		6129A37727830C71002CD060 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6129A37827830C71002CD060 /* UIView + StatefulView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6129A37927830C71002CD060 /* EmptyState */ = {
+			isa = PBXGroup;
+			children = (
+				6129A37A27830C71002CD060 /* EmptyState.swift */,
+				6129A37B27830C71002CD060 /* EmptyStateView.xib */,
+				6129A37C27830C71002CD060 /* EmptyStateView.swift */,
+				6129A37D27830C71002CD060 /* EmptyStateType.swift */,
+			);
+			path = EmptyState;
+			sourceTree = "<group>";
+		};
 		61A6A34D27805C2B006A2B49 = {
 			isa = PBXGroup;
 			children = (
@@ -102,8 +161,10 @@
 		61A6A37627806E9E006A2B49 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6129A37427830C71002CD060 /* StatefulView */,
 				61A6A3972781D8AD006A2B49 /* Managers */,
 				61A6A37727806EB3006A2B49 /* Builders */,
+				6129A388278312A1002CD060 /* Network.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -141,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				61A6A3952780EF22006A2B49 /* NavigationProtocol.swift */,
+				6129A37227830C42002CD060 /* LoadEmptyState.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -212,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61A6A36627805C2C006A2B49 /* LaunchScreen.storyboard in Resources */,
+				6129A38227830C71002CD060 /* EmptyStateView.xib in Resources */,
 				61A6A36327805C2C006A2B49 /* Assets.xcassets in Resources */,
 				61A6A36E27805F75006A2B49 /* Home.storyboard in Resources */,
 				61A6A38A2780787E006A2B49 /* CountriesList.storyboard in Resources */,
@@ -229,11 +292,20 @@
 				61A6A35A27805C2B006A2B49 /* AppDelegate.swift in Sources */,
 				61A6A37927806EBB006A2B49 /* Storyboards.swift in Sources */,
 				61A6A37F278076E5006A2B49 /* HomeModule.swift in Sources */,
+				6129A37327830C42002CD060 /* LoadEmptyState.swift in Sources */,
+				6129A389278312A1002CD060 /* Network.swift in Sources */,
+				6129A38727830CBF002CD060 /* EmptyStateData.swift in Sources */,
+				6129A38427830C71002CD060 /* EmptyStateType.swift in Sources */,
+				6129A38327830C71002CD060 /* EmptyStateView.swift in Sources */,
 				61A6A3962780EF22006A2B49 /* NavigationProtocol.swift in Sources */,
 				61A6A381278076E5006A2B49 /* HomeView.swift in Sources */,
+				6129A37F27830C71002CD060 /* LoadState.swift in Sources */,
 				61A6A380278076E5006A2B49 /* HomePresenter.swift in Sources */,
+				6129A38027830C71002CD060 /* UIView + StatefulView.swift in Sources */,
 				61A6A35C27805C2B006A2B49 /* SceneDelegate.swift in Sources */,
+				6129A38127830C71002CD060 /* EmptyState.swift in Sources */,
 				61A6A39B2781D987006A2B49 /* CountryManager.swift in Sources */,
+				6129A38527830C71002CD060 /* Appearance.swift in Sources */,
 				61A6A38727807872006A2B49 /* CountriesListView.swift in Sources */,
 				61A6A3922780E00C006A2B49 /* Country.swift in Sources */,
 				61A6A38627807872006A2B49 /* CountriesListPresenter.swift in Sources */,

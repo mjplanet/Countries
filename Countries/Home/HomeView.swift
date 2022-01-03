@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol HomeViewInterface: NavigationProtocol {
+protocol HomeViewInterface: NavigationProtocol, LoadEmptyState {
     func initialSetup()
-    func applySnapShot(animatingDifferences: Bool)
+    func applySnapShot(countries: [Country])
 }
 
 class HomeView: UICollectionViewController {
@@ -78,11 +78,21 @@ extension HomeView: HomeViewInterface {
         addNavigationBarButton()
     }
     
-    func applySnapShot(animatingDifferences: Bool) {
+    func applySnapShot(countries: [Country]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Country>()
         snapshot.appendSections(Section.allCases)
         snapshot.appendItems(presenter.selectedCountries)
-        dataSource.apply(snapshot, animatingDifferences: animatingDifferences)
+        dataSource.apply(snapshot, animatingDifferences: true)
     }
 
+}
+
+extension HomeView {
+    func showEmptyState(_ state: EmptyStateData) {
+        view.emptyState.show(type: state)
+    }
+    
+    func hideEmptyState() {
+        view.emptyState.hide()
+    }
 }

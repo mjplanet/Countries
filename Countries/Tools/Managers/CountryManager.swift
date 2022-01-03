@@ -7,32 +7,43 @@
 
 import Foundation
 
-class CountryManager {
+
+
+protocol CacheBehavior {
+    associatedtype T
+    var dataSource: [T] { get }
+    func saveDataSource(_ items: [T])
+    func saveSelectedCountries(_ items: [T])
+    func getCountries() -> [T]
+    func getSelectedCountries() -> [T]
+    func search(where isIncluded: (T) -> Bool) -> [T]
+}
+
+class CountryManager: CacheBehavior {
     
     static var shared = CountryManager()
     
-    lazy private var dataSource = [Country]()
-    lazy private var selectedCountriesVal = [Country]()
+    lazy var dataSource: [Country] = []
+    lazy var selectedCountries: [Country] = []
     
-    
-    func cacheCountries(_ countries: [Country]) {
-        self.dataSource = countries
+    func saveDataSource(_ items: [Country]) {
+        self.dataSource = items
     }
     
-    func updateSelectedCountries(_ countries: [Country]) {
-        self.selectedCountriesVal = countries
+    func saveSelectedCountries(_ items: [Country]) {
+        self.selectedCountries = items
     }
     
-    func search(with text: String) -> [Country] {
-        return dataSource.filter({ $0.name.common.lowercased() == text.lowercased() })
+    func getSelectedCountries() -> [Country] {
+        return selectedCountries
     }
     
     func getCountries() -> [Country] {
         return dataSource
     }
     
-    func selectedCountries() -> [Country] {
-        self.selectedCountriesVal
+    func search(where isIncluded: (Country) -> Bool) -> [Country] {
+        dataSource.filter(isIncluded)
     }
     
 }

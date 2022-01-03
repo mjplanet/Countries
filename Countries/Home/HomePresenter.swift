@@ -22,13 +22,18 @@ class HomePresenter: NSObject {
     private(set) var selectedCountries = [Country]() {
          didSet {
              DispatchQueue.main.async {
-                 self.view.applySnapShot(animatingDifferences: true)
+                 self.view.applySnapShot(countries: self.selectedCountries)
              }
          }
      }
     
     private func getSelectedCountries() {
-        self.selectedCountries = CountryManager.shared.selectedCountries()
+        selectedCountries = CountryManager.shared.getSelectedCountries()
+        if selectedCountries.isEmpty {
+            view.showEmptyState(.noSelectedCountry)
+        } else {
+            view.hideEmptyState()
+        }
     }
 
 }

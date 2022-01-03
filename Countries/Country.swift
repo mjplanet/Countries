@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Country: Hashable, Codable, Equatable {
+struct Country: Codable, Hashable, Equatable {
     
     static func == (lhs: Country, rhs: Country) -> Bool {
         return lhs.name == rhs.name && lhs.flag == rhs.flag
@@ -17,14 +17,14 @@ struct Country: Hashable, Codable, Equatable {
     var flag: String?
     
     var isSelected: Bool {
-        return CountryManager.shared.selectedCountries().contains(self)
+        return CountryManager.shared.getSelectedCountries().contains(self)
     }
     
     enum CodingKeys: String, CodingKey {
         case name, flag
     }
     
-    struct Name: Hashable, Codable {
+    struct Name: Codable, Hashable {
         var common: String
     }
     

@@ -12,7 +12,7 @@ struct CountriesListModule {
     
     func build(onDismiss: (() -> Void)?) -> UIViewController {
         let view = UIStoryboard.instantiate(.countriesList) as! CountriesListView
-        let presenter = CountriesListPresenter()
+        let presenter = CountriesListPresenter(network: NetworkManager())
         view.presenter = presenter
         presenter.view = view
         presenter.onDismiss = onDismiss
